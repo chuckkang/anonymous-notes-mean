@@ -1,0 +1,10 @@
+<p>
+  notes works!
+</p>
+<form  (submit)='onSubmit()'>
+NOTE: <input type="text" name="note" [(ngModel)]="note">{{note}}<br>
+	<input type="submit">
+</form>
+<div *ngFor='let note of allNotes'>
+	{{ note._id }}--{{ note.content }}--{{note.createdAt}}
+</div>
